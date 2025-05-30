@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task_1 Clone </title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<!-- Nav Bar  -->
+    <header class="grid grid-cols-1 grid-rows-8 w-full h-screen">
+        <nav class="grid row-span-1 grid-cols-12 grid-rows-1  gap-10 w-full h-full">
+            <div class="py-8  lg:col-span-3 col-span-5 flex justify-center items-center">
+                <img src="./assets/logo.png" alt="">
+            </div>
+            <div class="lg:flex hidden col-span-5 justify-center  items-center  h-full">
+                <ul class="flex justify-around items-center w-full h-full">
+                    <li class="text-md uppercase font-[400]">Home</li>
+                    <li class="text-md uppercase font-[400]">about</li>
+                    <li class="text-md uppercase font-[400]">Projects</li>
+                    <li class="text-md uppercase font-[400]">Services</li>
+                    <li class="text-md uppercase font-[400]">Blog <span>></span></li>
+                    <li class="text-md uppercase font-[400]">Page <span>></span></li>
+                    <li class="text-md uppercase font-[400]">Contact</li>
+                </ul>    
+            </div>
+            <div class="col-span-4  lg:flex justify-center w-full  items-center">
+                <button class="hidden lg:flex cursor-pointer hover:bg-black hover:text-white hover:animate-wiggle px-10 py-4 border-1 text-md font-[400] uppercase">
+                    Get in Touch 
+                </button>
+                <button class="text-right flex justify-end items-center lg:hidden w-full h-full text-black">
+                        <i class="fa-solid fa-bars text-3xl"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+         <section class="row-span-5 lg:row-span-6  w-full h-full">
+            <div class="relative top-0 left-0 w-full h-full  bg-[url(./assets/hero.png)] bg-no-repeat bg-center ">
+                <!-- shadow bg -->
+                 <div class="absolute top-0 left-0 w-full z-30 h-full bg-[rgba(0,0,0,0.2)]"></div>
+                 <!-- Text Section -->
+                    <div class="w-full h-full flex justify-center items-center z-50  absolute top-0 left-0">
+                        <div class="flex justify-center gap-10 items-center flex-col w-full h-full">
+                            <div class="w-full ">
+                            <h1 class="lg:text-7xl px-10 text-4xl tracking-[20px] font-sans w-full text-center font-semibold text-white tracking-wide">
+                                WE DESIGN YOUR SPACE
+                            </h1>
+                            <p class="my-5 px-10 text-center text-white font-serif md:text-2xl">
+                                Lorem ipFit amet consectetur adipisicing elit sed do eiusmod tempor
+                            </p>
+                        </div>
+                        <div>
+                            <button class="px-10 cursor-pointer py-3 uppercase text-white border-1 text-lg font-[300] hover:bg-white hover:text-black hover:border-white">
+                                See Our Projects 
+                            </button>
+                        </div>
+                        </div>
+                        
+                    </div>
+            </div>
+         </section>
+    </header>
+</body>
+</html>
