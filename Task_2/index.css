@@ -1,0 +1,259 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    margin: auto;
+    max-width: 1640px;
+    height: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.header-bg-image{
+ position: relative;
+ background: url(./assets//Hero.png) ;
+ background-position:center;  
+ width: 100%;
+ height: 100%;
+background-repeat: no-repeat;
+
+}
+.overlay{
+    position: absolute;
+    z-index: 40;
+    width: 100%;
+    height: 100%;
+    background: rgba(37, 11, 2, 0.63);
+}
+.nav-container, .nav-container  nav ,.nav-container nav div ul {
+    z-index: 99;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    color: #fff;
+}
+.nav-container nav div h2 {
+    font-size: larger;
+    font-weight: bold;
+    width: calc(100%/3 -15px);
+}
+.nav-container nav div ul {
+    flex-grow: 2;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap:30px;
+    text-transform: capitalize  ;
+    font-family: sans-serif;
+}
+.nav-container nav div ul li:first-child{
+    color:#ff8368;
+}
+.nav-container nav div i {
+    color: #ff8368;
+    font-size: larger;
+}
+.nav-container nav div .fa-bars{
+    display: none;
+}
+.hero-container{
+position: relative;
+width: 100%;
+padding: 20px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 70vh;
+z-index: 99;
+gap: 20px;
+text-align: center;
+}
+
+.hero-container div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hero-container  div div:first-child p{
+    text-align: center;
+    font-size: large;
+    font-weight: 600;
+    color: #fff;
+    z-index: 99;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+}
+
+
+.hero-container  div div h1{
+    text-align: center;
+    font-size: 55px;
+    font-weight: 600;
+    color: #fff;
+    z-index: 99;
+    width: 70%;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+}
+.hero-container div div .hero-para{
+     text-align: center;
+    font-size: large;
+    color: #fff;
+    z-index: 99;
+    width: 60%;
+    line-height: 25px;
+    font-family: sans-serif;
+}
+.hero-container div div button{
+    background: #ff8368;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    color: white;
+}
+
+.featurs-container, .featurs-container .featurs-cards-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #fef7f5;
+    padding: 30px;
+
+}
+
+
+.featurs-container .featurs-cards-container div {
+    width: calc(100%/4 - 15px*2) ;
+    margin: 5px 0px;
+    background: #fef7f5;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    flex-direction: column;
+    border-left:solid 2px #ff8368;
+}
+.featurs-container .featurs-cards-container div h3{
+    color: #ff8368;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+.featurs-container .featurs-cards-container div h2{
+    font-family: serif;
+    font-weight: 500;
+    font-size: 25px;
+    
+}
+.featurs-container .featurs-cards-container div p{
+    font-size: 15px;
+    width: 100%;
+    line-height: 1.5;
+    font-family: sans-serif;
+    color: #454647;
+}
+
+
+@media screen and (max-width: 520px) {
+    .nav-container, .nav-container  nav {
+        padding:8px 5px;
+    }
+    .header-bg-image{
+        background-position:35% 10%;
+    }
+  .nav-container nav div ul, .nav-container nav div i:first-child{
+    display: none;
+  }
+  .nav-container nav div  .fa-bars{
+    display: flex;
+    padding: 10px;
+    color: #f53d14;
+    border:solid 1px;
+    cursor: pointer;
+}
+.hero-container  div div h1{
+        width:100%;
+    font-size: 30px;
+}
+.hero-container div div .hero-para{
+    width: 100%;
+    font-size: 15px;
+}
+.hero-container{
+    height: 60vh;
+}
+}
+
+@media screen and (min-width: 520px) and (max-width: 875px) {
+  .hero-container div div h1 {
+    width: 100%;
+    font-size: 40px;
+  }
+
+  .hero-container div div .hero-para {
+    width: 100%;
+    font-size: 20px;
+  }
+  .featurs-container .featurs-cards-container{
+    flex-direction: column;
+    width: 100%;
+    gap:25px
+  }
+  .featurs-container .featurs-cards-container div{
+    width: 100%;
+    margin: 10px;
+  }
+}
