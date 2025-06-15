@@ -1,0 +1,819 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  font-family: sans-serif;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* actual css from here  */
+
+#mainContainer {
+  max-width: 1600px;
+  max-height: 100%;
+  margin: 0 auto;
+}
+#heroContainer {
+  min-height: 100vh;
+  background-image: url("../assets/image.png");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+#heroContainer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000a4;
+  z-index: 45;
+}
+
+#navContainer,
+#heroText {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  z-index: 60;
+  color: white;
+  width: calc(100% - (50px));
+  height: 100%;
+  padding: 30px 50px;
+}
+
+#navContainer div ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-transform: capitalize;
+}
+#navContainer div h2 {
+  font-size: 30px;
+  font-weight: 600;
+}
+#navContainer div ul li {
+  font-size: 18px;
+  font-weight: 500;
+}
+#navContainer div ul li:first-child {
+  color: #0ca8c7;
+}
+#heroText {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#heroText div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+#heroText div h2 {
+  font-size: 65px;
+  font-weight: 600;
+}
+#heroText div p {
+  font-size: 30px;
+  padding: 20px 0;
+}
+#heroText div:last-child {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+#heroText div:last-child button,
+#aboutContainer .aboutContainerText .aboutContainer-1 button,
+.callToActionContainerText div:last-child button,.button {
+  background: #0ca8c7;
+  padding: 14px 30px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 20px 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+#heroText div:last-child button:last-child {
+  background-color: #00000065;
+  padding: 10px 30px;
+  border: #0ca8c7 solid 2px;
+}
+
+#mobileMenu {
+  display: none;
+}
+
+/* about */
+
+#aboutContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+}
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  min-height: 150px;
+}
+.heading h2 {
+  font-size: 30px;
+  text-transform: uppercase;
+  position: relative;
+}
+.heading h2::after {
+  content: "";
+  position: absolute;
+  left: 30%;
+  width: 100%;
+  max-width: 50px;
+  height: 100%;
+  top: 30%;
+  border-bottom: #0ca8c7 solid 4px;
+}
+.heading .textContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+.heading .textContainer h3{
+  font-weight: 600;
+  color: #666666;
+cursor: pointer;
+}
+.heading .textContainer h3:first-child{
+  color: #0098f8;
+  
+}
+.heading p {
+  font-size: 16px;
+  color: #666666;
+  text-align: center;
+  font-weight: 400;
+}
+.aboutContainerText {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: calc(100% - 30px);
+  height: 100%;
+  padding: 30px 40px;
+  gap: 30px;
+}
+.aboutContainerText div {
+  width: calc(100% / 2 - 30px);
+}
+.aboutContainerText div img {
+  width: 100%;
+}
+.aboutContainerText .aboutContainer-1 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.aboutContainerText .aboutContainer-1 h3,.callToActionContainerText div h3 {
+  font-size: 35px;
+  font-weight: 550;
+}
+.aboutContainerText .aboutContainer-1 p {
+  font-style: italic;
+}
+.aboutContainerText .aboutContainer-1 p,
+.servicesContainerCard div:last-child p,
+.featuresContainerCardContainer .featuresContainerCard div p,
+.aboutContainerText .aboutContainer-1 ul li,
+.callToActionContainerText div p,
+.testimonialCardContainer .testimonialCardText div div p,
+.teamContainerCardContainer .teamContainerCard div:last-child p,
+.contactContainerText .contactDetails div p,
+.fotterDetailsCard div p{
+  color: #666666;
+  margin: 12px 0;
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+.aboutContainerText .aboutContainer-1 ul li i {
+  font-size: 18px;
+  font-weight: 100;
+  color: #0ca8c7;
+}
+
+.servicesContainerText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+#servicesContainer {
+  background: #f9f9f9;
+}
+.servicesContainerText .servicesContainerCardContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: calc(100% - (3 * 10px));
+  gap: 10px;
+  padding: 30px 40px;
+  flex-wrap: wrap;
+}
+.servicesContainerText .servicesContainerCardContainer .servicesContainerCard,.contactDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 10px;
+  width: calc(100% / 3 - (3 * 10px));
+  margin: 10px 0;
+}
+
+.servicesContainerText
+  .servicesContainerCardContainer
+  .servicesContainerCard
+  div:first-child
+  i,
+.featuresContainerCardContainer .featuresContainerCard div i {
+  font-size: 30px;
+  background-color: #0ca8c7;
+  border-radius: 50%;
+  padding: 10px;
+  color: white;
+}
+.servicesContainerText
+  .servicesContainerCardContainer
+  .servicesContainerCard
+  div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.servicesContainerText
+  .servicesContainerCardContainer
+  .servicesContainerCard
+  div:last-child
+  h3,
+.featuresContainerCardContainer .featuresContainerCard div h3 ,.contactContainerText .contactDetails div h3, .fotterDetailsCard  div h3{
+  font-size: 20px;
+  font-weight: 600;
+}
+.featuresContainerCardContainer {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 30px 40px;
+  flex-wrap: nowrap;
+}
+.featuresContainerCardContainer .featuresContainerCard {
+  width: calc(100% / 4 );
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 30px;
+  background: #fff3e2;
+  height: 250px;
+}
+.featuresContainerCardContainer .featuresContainerCard div i {
+  background: #fff3e2;
+  color: #edb86e;
+}
+.featuresContainerCardContainer .featuresContainerCard:nth-child(2),
+.featuresContainerCardContainer .featuresContainerCard:nth-child(2) div i {
+  background-color: #deedfd;
+}
+.featuresContainerCardContainer .featuresContainerCard:nth-child(2) div i {
+  color: #0098f8;
+  font-weight: 100;
+}
+.featuresContainerCardContainer .featuresContainerCard:nth-child(3) div i {
+  color: #48c88a;
+  font-weight: 200;
+}
+.featuresContainerCardContainer .featuresContainerCard:nth-child(4) div i {
+  color: #f06e7b;
+}
+.featuresContainerCardContainer .featuresContainerCard:nth-child(3),
+.featuresContainerCardContainer .featuresContainerCard:nth-child(3) div i {
+  background: #d5f1e4;
+}
+
+.featuresContainerCardContainer .featuresContainerCard:nth-child(4),
+.featuresContainerCardContainer .featuresContainerCard:nth-child(4) div i {
+  background: #fdeded;
+}
+.featuresContainerCardContainer .featuresContainerCard div:last-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+  min-height: 100px;
+}
+
+#callToActionContainer {
+  margin: 0 auto;
+  background: url(../assets/callToAction.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+#callToActionContainer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  background: #00000070;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.callToActionContainerText{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 30px 40px;
+    gap: 20px;
+    min-height: 250px;
+    z-index: 99;
+}
+.callToActionContainerText div{
+    width: calc(100% - 400px);
+    color: white;
+}
+.callToActionContainerText div:last-child{
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+}
+.callToActionContainerText div p{
+    color: #fff;
+}
+.callToActionContainerText div:last-child button{
+    background: #00000000;
+    border: solid 1px white;
+}
+.portfiloContainerCardContainer div img{
+  width: 100%;
+}
+#portfiloContainer {
+  margin: 30px 0;
+}
+.testimonialCardContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+}
+.testimonialCardContainer .testimonialCardText {
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  max-width: 750px;
+  margin: 10px 0;
+  
+}
+.testimonialCardContainer .testimonialCardText div{
+    width: calc(100% - 100px);
+
+}
+.testimonialCardContainer .testimonialCardText .border{
+    border-left: solid 4px #0098f8;
+    padding: 0px 30px;
+}
+.testimonialCardContainer div div:last-child{
+  max-width: 100px;
+}
+.testimonialCardContainer div div:last-child img{
+  width: 100%;
+  border-radius: 50%;
+}
+.testimonialCardContainer .testimonialCardText div div p{
+  font-style: italic;
+}
+.testimonialCardContainer .testimonialCardText div {
+    width: 100%;
+}
+.testimonialCardContainer .testimonialCardText div div h3,.teamContainerCardContainer .teamContainerCard div:last-child h3{
+  font-weight: 600;
+}
+.testimonialCardContainer .testimonialCardText div:last-child div p{
+  line-height: 0.5;
+}
+.quoute{
+  color: #0098f8;
+  padding: 3px;
+  font-size: 20px;
+  margin: 3px;
+}
+
+
+.dotContainer,.teamContainerCard{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+  padding:20px 10px;
+}
+.dotContainer .dot{
+  width: 10px;
+  height: 10px;
+  background-color: #6666667a;
+  border-radius: 50%;
+}
+.dotContainer .dot:nth-child(3){
+  background-color: #0ca8c7;
+}
+
+.teamContainerCardContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: calc(100% - (4*20));
+  padding: 30px 40px;
+}
+.teamContainerCardContainer .teamContainerCard{
+  width: calc(100%/4 - (4*10));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  padding:0 ;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.teamContainerCardContainer .teamContainerCard div img {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+
+}
+.teamContainerCardContainer .teamContainerCard div:last-child{
+  padding: 15px 0;
+  text-align: center;
+}
+.contactContainerText{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:10px;
+  width: calc(100% - (2*10px));
+  padding: 30px 40px;
+}
+.contactContainerText .contactDetails{
+    width: 100%;
+    margin: 20px 10px;
+    justify-content: start;
+    max-width: 550px;
+  }
+.contactContainerText .contactDetails div:first-child{
+  padding: 15px;
+  background: #d5e4f1be;
+  border-radius: 5px;
+}
+.contactContainerText .contactDetails div:first-child i{
+  color: #03c4eb;
+  font-size: 18px;
+}
+.button{
+  border-radius: 20px;
+}
+
+.contactFormContainer{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  width: calc(100% - 550px - 20px );
+  gap: 20px;
+}
+.form-1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+.form-1 input {
+  width: calc(100%/2 - (2*10px));
+  padding: 10px 15px;
+  border:solid 1px #3d3b3baf ;
+}
+.form-2 input, textarea{
+  width: 100%;
+}
+
+#fotterMain{
+  background: #000;
+  display: flex ;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap:10px;
+  padding: 30px 40px;
+  color: white;
+}
+
+.fotterDetails{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  width: calc(100% - (4*10px));
+}
+.fotterDetails .fotterDetailsCard {
+  width: calc(100%/4 - (4*10px));
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: row;
+  gap: 20px;
+  padding: 40px 20px;
+}
+.fotterDetailsCard div i{
+  font-size: 25px;
+  color: #0ca8c7;
+}
+.fotterDetailsCard div p{
+  font-size: 15px;
+  line-height: 1;
+  color: white;
+}
+.fotterDetailsCard div p span{
+  font-weight: bold;
+}
+.socialMedia{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding:25px 0px
+}
+
+.socialMedia i{
+  color: #666666 !important;
+  border: solid 1px #666666;
+  border-radius: 50%;
+  padding: 5px;
+}
+.socialMedia i:hover {
+  color: #0ca8c7 !important;
+  border: solid 1px #0ca8c7;
+  cursor: pointer;
+}
+.copyright{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-top:solid 1px #666666 ;
+  padding: 30px 40px;
+  text-align: center;
+  gap: 10px;
+}
+.copyright a{
+  color: #0ca8c7 !important;
+}
+
+
+
+
+
+@media (min-width: 360px) and (max-width: 900px) {
+  #mainContainer {
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+  }
+  #heroText,
+  #navContainer,
+  #aboutContainer .aboutContainerText div,
+  #aboutContainer .aboutContainerText ,.servicesContainerText .servicesContainerCardContainer,.featuresContainerCardContainer ,.testimonialCardContainer,.teamContainerCardContainer,.contactContainerText,.contactFormContainer, .fotterDetails .fotterDetailsCard, .copyright{
+    padding: 20px;
+    width: 100%;
+  }
+  #navContainer div ul {
+    display: none;
+  }
+  #heroText div h2 {
+    font-size: 30px;
+    text-align: center;
+  }
+  #heroText div p,
+  .servicesContainerText
+    .servicesContainerCardContainer
+    .servicesContainerCard
+    div:first-child
+    i,
+  .servicesContainerText
+    .servicesContainerCardContainer
+    .servicesContainerCard
+    div:first-child
+    h3 {
+    font-size: 20px;
+  }
+  #heroText div img {
+    max-width: 300px;
+    margin: 10px 0;
+  }
+  #mobileMenu,
+  #navContainer div h2 {
+    display: inline-block;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  /* about */
+  .aboutContainerText {
+    flex-direction: column-reverse;
+  }
+  .aboutContainerText .aboutContainer-1 h3 {
+    font-size: 25px;
+  }
+  .servicesContainerText .servicesContainerCardContainer,.callToActionContainerText,
+  .featuresContainerCardContainer ,.testimonialCardContainer .testimonialCardText,.teamContainerCardContainer,.contactContainerText,.form-1 input,.form-1,.fotterDetails {
+    flex-direction: column;
+    width: 100%;
+  }
+  .servicesContainerText .servicesContainerCardContainer .servicesContainerCard,
+  .featuresContainerCardContainer .featuresContainerCard, .callToActionContainerText  div,.testimonialCardContainer .testimonialCardText div, .teamContainerCard, .fotterDetails .fotterDetailsCard{
+    width: 100%;
+  }
+  .callToActionContainerText  div{
+    text-align: center;
+  }
+  .testimonialCardContainer div div:last-child{
+    margin: 10px 0;
+    max-width: 250px;
+  }
+  .testimonialCardContainer .testimonialCardText .border{
+    padding: 0 20px;
+  }
+  .testimonialCardContainer .testimonialCardText, .fotterDetails{
+    justify-content: center;
+    align-items: center;
+  }
+  textarea{
+    padding:10px 15px;
+  }
+}
