@@ -1,0 +1,405 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#mainContainer{
+    max-width: 1600px;
+    font-size: 20px;
+    font-family: sans-serif;
+    margin: 0 auto;
+}
+#heroContainer{
+    background-image: url(../images/hero.png);
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 100%;   
+}
+
+#heroContainer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 40;
+    background: #b8ada285;
+   
+}
+#navContainer{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    align-items: center;
+    width: 100%;
+    z-index: 55;
+    color: #fff;
+    border-bottom: solid #fff8 1px;
+}
+#navContainer div h2{
+    font-size: 35px;
+    font-weight: 500;
+
+}
+.dot{
+    display: inline-block;
+    position: relative;
+    background-color: #fd7b17;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+#navContainer div:last-child ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:20px;
+}
+#navContainer div:last-child ul li{
+    list-style: none;
+    text-transform: capitalize;
+    padding: 0 10px;
+}
+#navContainer div:last-child ul li:hover{
+    cursor: pointer;
+    color: #fd7b17;
+}
+
+#heroSectionContainer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    min-height: 91vh;
+    height: 100%;
+    z-index: 55;
+}
+#heroSectionContainer div h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    padding: 20px 0;
+}
+#heroSectionContainer div div, #aboutContainer div div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+}
+#heroSectionContainer div div p{
+    text-align: center;
+    color: #fff;
+    line-height: 2;
+    
+}
+#mobileNav {
+    display: none;
+}
+#mobileNav i:hover {
+    color: #fd7b17;
+    cursor: pointer;
+}
+
+#featuresSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 50px;
+    margin: 20px 0;
+}
+.featuresCard div p{
+    font-size: 20px;
+    line-height: 1.5;
+    color: gray;
+}
+.featuresCard div:first-child{
+    max-width: 100px;
+}
+.featuresCard div:first-child img{
+    width: 100%;
+}
+.featuresCard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100/3);
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    
+}
+
+.featuresCard div h3{
+    font-size: 23px;
+    font-weight: 400;
+    padding: 20px 5px;
+    text-transform: capitalize;
+}
+#aboutContainer, #myTeamContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin: auto 0;
+    padding: 20px 50px;
+}
+#aboutContainer div:first-child, #myTeamContainer .myTeamText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 0;
+    width: calc(100% - 10px);
+}
+
+#aboutContainer div:first-child h2, #myTeamContainer div:first-child h2, .contactText{
+    color: #fd7b17;
+    text-transform: capitalize;
+}
+#aboutContainer div:first-child div p , .aboutCardText p, #myTeamContainer div:first-child div p,.teamCard div p{
+    text-align: center;
+    line-height: 1.5;
+    color: gray;
+}
+.aboutCardContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    width: calc(100% - (2*20px));
+    padding: 30px 0;
+}
+.aboutCardContainer div{
+    width: calc(100%/2 - 10px);
+}
+.aboutCardContainer img{
+    width: 100%;
+}
+.aboutCardText{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: flex-start;
+    height: 100%;
+}
+.aboutCardText h2{
+    text-align: left;
+    padding: 10px 0;
+    font-size: 40px;
+    font-weight: 400;
+    margin: 0;
+}
+.aboutCardText p{
+    text-align: start;
+    padding: 5px 10px;
+}
+
+.teamContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+    width: calc(100% - (4*20px));
+    padding: 30px 0;
+}
+.teamCard{
+    width: calc(100%/4);
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.teamCard img{
+    width: 100%;
+}
+.teamCard div h3{
+    font-size: 25px;
+    font-weight: 500;
+}
+/* .teamCard div:last-child {
+    padding: 5px 20px;
+} */
+
+#contactSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 50px 30px;
+}
+
+.formContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    padding: 30px 100px;
+}
+.formContainer div h2 {
+    font-weight: 500;
+    font-size: 30px;
+    text-transform: capitalize;
+} 
+.formContainerParent{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    max-width: 1200px;    
+    width: 100%;
+    margin:50px 30px;
+}
+.formDataContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1000px;
+    width: 100%;
+    padding: 20px 0;
+}
+.formDataContainer div{
+    width: 100%;
+    margin: 10px 0;
+}
+.formDataContainer div input, textarea{
+    width: 100%;
+    border-radius:50px;
+    border:solid 1px gray;
+    padding:10px 20px;
+    margin:15px 0;
+}
+.formDataContainer div input:focus ,textarea:focus{
+    outline: solid 1px #fd7b17;
+    border: none;
+}
+.formDataContainer div button{
+    background-color: #fd7b17;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    font-size: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.formDataContainer div button:hover{
+    background-color: #fff;
+    color: #fd7b17;
+    border: gray solid 1px;
+}
+
+#fotterContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap:10px;
+    width: calc(100%);
+    background-color: #343a40;
+    color: white;
+    padding: 100px 80px ;
+    box-sizing: border-box;
+}
+#fotterContainer div{
+    max-width: 600px;
+}
+#fotterContainer div div{
+    width: calc(100% /2 );
+}
+#fotterContainer div h2{
+    width: 100%;
+    font-size: 25px;
+    font-weight: 400;
+    padding: 20px 0;
+}
+#fotterContainer div p, #fotterContainer div ul li{
+    line-height: 1.5;
+    width: 100%;
+    font-size: 18px;
+    color: rgb(199, 195, 195);
+}
+#fotterContainer div ul li{
+    cursor: pointer;
+    text-decoration: underline;
+    list-style: none;
+    margin: 1px 0;
+}
+/* mobile responsive  */
+
+@media (min-width:360px) and (max-width:870px) {
+    #heroSectionContainer div h1{
+        font-size: 40px;
+    }
+    #heroSectionContainer div div{
+        width: 100%;
+    }
+    #heroSectionContainer div div p{
+        font-size: 18px;
+        padding: 0 5px;
+    }
+    #navContainer{
+        padding: 10px 5px;
+    }
+    #navContainer div:last-child ul{
+        display: none;
+    }
+    #mobileNav{
+        display: inline-block;
+        text-align: right;
+        padding: 10px 5px;
+        width: 100px;
+        z-index: 55;
+    }
+    #mobileNav i{
+        font-size: 25px;
+    }
+    #navContainer div h2{
+        font-size: 30px;
+        padding: 5px;
+    }
+    #featuresSection, #aboutContainer,#myTeamContainer, .aboutCardContainer, .teamContainer, #fotterContainer {
+        width: 100%;
+        flex-direction: column;
+        padding: 10px 5px;
+    }
+    .featuresCard, .aboutCardContainer div,.teamCard{
+        width: 100%;
+    }
+    .aboutCardText h2{
+        font-size: 25px;
+        padding: 5px;
+    }
+    .teamContainer, .teamCard{
+        justify-content: center;
+        align-items: center;
+    }
+    .teamCard img{
+        max-width: 500px;
+    }
+    .teamCard div h3{
+        font-size: 18px;
+    }
+    .teamCard div p, #fotterContainer p{
+        font-size: 15px;
+    }
+    .teamCard div:last-child{
+        width: 100%;
+        text-align: center;
+        padding: 5px;
+    }
+    .formContainer, #fotterContainer{
+        padding: 20px;
+    }
+}
